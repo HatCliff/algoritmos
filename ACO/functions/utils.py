@@ -11,8 +11,10 @@ def generar_poblacion(n, p):
 
 def calc_costo(matriz_distancias):
     cost_matrix = np.zeros(matriz_distancias.shape[0])
+    print("Costos: ")
     for i in range(matriz_distancias.shape[0]):
         cost_matrix[i] = np.sum(matriz_distancias[i])  # Suma las distancias de cada fila
+    print(cost_matrix)
     return cost_matrix
 
 
