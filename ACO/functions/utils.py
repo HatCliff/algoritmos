@@ -6,13 +6,15 @@ def generar_poblacion(n, p):
         fila = np.arange(n)  # Crea un arreglo de 0 a n-1
         np.random.shuffle(fila)  # Baraja el arreglo para generar una permutación
         poblacion[i] = fila  # Asigna la fila barajada a la matriz
-    #print(poblacion, "\n")
     return poblacion
 #Fin codigo de la tarea de genetica
 
 def calc_costo(matriz_distancias):
-    
-    pass
+    cost_matrix = np.zeros(matriz_distancias.shape[0])
+    for i in range(matriz_distancias.shape[0]):
+        cost_matrix[i] = np.sum(matriz_distancias[i])  # Suma las distancias de cada fila
+    return cost_matrix
+
 
 def matriz_distancias(data):
     n = len(data) # Tomamos el num de ciudades

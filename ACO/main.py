@@ -21,6 +21,7 @@ n = len(data)
 resultados = generar_poblacion(n,n)
 matriz_distancia = matriz_distancias(data)
 matriz_heuristica = 1 / np.linalg.inv(matriz_distancia)
+costos = calc_costo(matriz_distancia)
 
 
 
